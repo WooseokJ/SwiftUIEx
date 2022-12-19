@@ -6,83 +6,64 @@
 //
 
 import SwiftUI
-import CoreData
+
+// ios 13+ WWDC19
+// uikit, uiLabel, uiButton, UIswitch, Appkit ...
+// ios13,14,15,16 모두다 코드가다르다
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+        VStack {
+            Text("안녕하세요1")
+                .foregroundColor(.blue)
+            Text("안녕하세요2")
+                .opacity(0.3)
+            Spacer() // 비어있는공간최대한활용
+            Circle().fill(.yellow)
+            Ellipse().fill(.green)
+//            Image(systemName: "star.fill")
+//            .imageScale(.large)
+//            .foregroundColor(Color.red) // UIcolor.blue는 import하지않으면 가져오지못함 , 대신 Color라고 있음
+            Text("안녕하세요3")
+                .font(.title)
+                .foregroundColor(.yellow)
+                .fontWeight(.heavy)
+            
+            Text("hello world ")
+                .font(.caption)
+            
+            Text("hello world italic font")
+                .font(.caption)
+                .italic()
+            
+            Text("안녕하세요2\n두번쨰줄\n세번쨰줄")
+                .underline() // 밑줄
+                .strikethrough() //취소선
+            
+            Text("125678 \n34\n56")
+                .underline()
+                .lineLimit(2) // numberofLine
+                .kerning(30) //  간겨
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        .padding()
+        .border(.red)
+        .padding()
+        .border(.green)
+        .frame(width: 300, height: 400)
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.gray)
+        
+        
+        
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        
+//        ExampleView()
+//            .previewDisplayName("iPhone 11 ")
     }
 }
