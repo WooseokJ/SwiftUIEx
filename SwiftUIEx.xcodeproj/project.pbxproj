@@ -14,9 +14,7 @@
 		18B925E1294FF15800A25AAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B925E0294FF15800A25AAF /* Preview Assets.xcassets */; };
 		18B925E3294FF15800A25AAF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925E2294FF15800A25AAF /* Persistence.swift */; };
 		18B925E6294FF15800A25AAF /* SwiftUIEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18B925E4294FF15800A25AAF /* SwiftUIEx.xcdatamodeld */; };
-		18B925F0294FF15800A25AAF /* SwiftUIExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925EF294FF15800A25AAF /* SwiftUIExTests.swift */; };
-		18B925FA294FF15800A25AAF /* SwiftUIExUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925F9294FF15800A25AAF /* SwiftUIExUITests.swift */; };
-		18B925FC294FF15800A25AAF /* SwiftUIExUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925FB294FF15800A25AAF /* SwiftUIExUITestsLaunchTests.swift */; };
+		18E109D729925CDF00355777 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E109D629925CDF00355777 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +44,8 @@
 		18B925E2294FF15800A25AAF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		18B925E5294FF15800A25AAF /* SwiftUIEx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUIEx.xcdatamodel; sourceTree = "<group>"; };
 		18B925EB294FF15800A25AAF /* SwiftUIExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B925EF294FF15800A25AAF /* SwiftUIExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExTests.swift; sourceTree = "<group>"; };
 		18B925F5294FF15800A25AAF /* SwiftUIExUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B925F9294FF15800A25AAF /* SwiftUIExUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExUITests.swift; sourceTree = "<group>"; };
-		18B925FB294FF15800A25AAF /* SwiftUIExUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18E109D629925CDF00355777 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				18B925D8294FF15700A25AAF /* SwiftUIEx */,
-				18B925EE294FF15800A25AAF /* SwiftUIExTests */,
-				18B925F8294FF15800A25AAF /* SwiftUIExUITests */,
 				18B925D7294FF15700A25AAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				18B925D9294FF15700A25AAF /* SwiftUIExApp.swift */,
+				18E109D629925CDF00355777 /* ListView.swift */,
 				18B925DB294FF15700A25AAF /* ContentView.swift */,
 				1801F9F4294FF93D00AB5CDA /* ExampleView.swift */,
 				18B925DD294FF15800A25AAF /* Assets.xcassets */,
@@ -117,23 +112,6 @@
 				18B925E0294FF15800A25AAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		18B925EE294FF15800A25AAF /* SwiftUIExTests */ = {
-			isa = PBXGroup;
-			children = (
-				18B925EF294FF15800A25AAF /* SwiftUIExTests.swift */,
-			);
-			path = SwiftUIExTests;
-			sourceTree = "<group>";
-		};
-		18B925F8294FF15800A25AAF /* SwiftUIExUITests */ = {
-			isa = PBXGroup;
-			children = (
-				18B925F9294FF15800A25AAF /* SwiftUIExUITests.swift */,
-				18B925FB294FF15800A25AAF /* SwiftUIExUITestsLaunchTests.swift */,
-			);
-			path = SwiftUIExUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +246,7 @@
 			files = (
 				18B925E3294FF15800A25AAF /* Persistence.swift in Sources */,
 				18B925DC294FF15700A25AAF /* ContentView.swift in Sources */,
+				18E109D729925CDF00355777 /* ListView.swift in Sources */,
 				18B925E6294FF15800A25AAF /* SwiftUIEx.xcdatamodeld in Sources */,
 				18B925DA294FF15700A25AAF /* SwiftUIExApp.swift in Sources */,
 				1801F9F5294FF93D00AB5CDA /* ExampleView.swift in Sources */,
@@ -278,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B925F0294FF15800A25AAF /* SwiftUIExTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B925FA294FF15800A25AAF /* SwiftUIExUITests.swift in Sources */,
-				18B925FC294FF15800A25AAF /* SwiftUIExUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
