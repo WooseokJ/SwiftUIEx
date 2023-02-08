@@ -42,3 +42,16 @@ struct ContentView_Previews: PreviewProvider { // 프리뷰 기능 미리확인�
 //            .previewDisplayName("iPhone 11 ")
     }
 }
+
+// swift ui 구조
+// 뷰구조 - opaque type
+// 데이터 흐름 -> 프로퍼티 래퍼, 관련키워드로 @state, @binding,@environment,@pushlished
+// 라이프사이클
+
+
+// uikit -> iphone, ipad
+// appkit -> mac os
+// watchkit -> 애플워치
+// 이러한 코드 기반이 swiftui이기떄문에 멀티플랫폼 대응하기가 쉽다. text가 uikit,appkit,watchkit에서 다 통용된다.
+
+

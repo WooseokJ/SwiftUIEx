@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ExampleView: View { // view 는 프로토콜 
-    var body: some View { // view는 하나만 리턴해야하는데 3개(Text(hi1,hi2,hi3)를 쓰고있어서 프리뷰에 반영이어려워서 VStack이필요
+    var body: some View { // view는 하나만 리턴해야하는데(body가 연산프로퍼티라서 하나만리턴) 3개(Text(hi1,hi2,hi3)를 쓰고있어서 프리뷰에 반영이어려워서 VStack이필요
         VStack { // stack 뷰 개념  
             Text("hi1")
                 .font(.title) //크기
