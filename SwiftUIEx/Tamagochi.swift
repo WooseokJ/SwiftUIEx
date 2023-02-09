@@ -112,11 +112,11 @@ struct Tamagochi: View {
             
             // MARK: 물먹기 버튼
             GrowButtn(text: "화면 전환 버튼", icon: Image(systemName: "pencil")) {
-                showModal = true
+                showModal = true // 참조하는 showModal이 true로 바뀜
             }
             .sheet(isPresented: $showModal) { // $showModal은 참조를해서 반영하기위해 $를 붙임.
                 ExampleView()
-            }
+            } // $showModal을 하면 참조한것을 가져온것. 원본은 false이다.
 
         }
         // swiftui는 VC가 없고 뷰의생명주기가 두가지밖에없다.
