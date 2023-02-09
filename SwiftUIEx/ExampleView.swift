@@ -51,6 +51,6 @@ struct ExampleView: View { // view 는 프로토콜
 struct ExampleView_Previews: PreviewProvider {
     static var previews: some View {
         ExampleView()
-            .previewDevice("iphone 11") //iphone 11에 맞게 보여줘!
+            .previewDevice("iPhone 8") // iphone 11에 맞게 보여줘!
     }
 }
