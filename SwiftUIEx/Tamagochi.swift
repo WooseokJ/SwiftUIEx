@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// 공부하기좋은 키워드 ! 
+// Opaque Type VS Type as Protocol
+// swift5.1 keyPath -> KVO, KVC
+// Identifiable 프로토콜
+
 struct GrowButtn: View {
     var text: String
     var icon: Image
@@ -72,6 +77,7 @@ struct Tamagochi: View {
     @State private var riceCnt: Int = 0
     @State private var waterCnt: Int = 0
     @State private var showModal = false // struct지만 showMadal은 힙에 저장되기떄매 참조가가능.
+    @State private var isAnimating = false
     
     var characterName: some View {
         Text("방실방실 다마고치 \(Int.random(in: 1...100))")
@@ -82,13 +88,21 @@ struct Tamagochi: View {
         // lazyVStack, lazyHStack 은 동작방식의차이가있다.   :화면에 렌더링될떄 데이터를 메모리담고 그린다. 
         // V,H,ZStack: 전체 데이터를 메모리에 담아두고 스크롤할떄 보여줌.
         VStack(spacing: 30) {
+            
             Text("밥알 \(riceCnt)개 물방울 \(waterCnt)개 ")
             
             // 구조체와 연산프로퍼티의 차이는 다시그려지는 패턴이 다르다.
             characterName
             ExampleText() // characterName와의 차이점은 한번 빌드가 되고나서는 다시 뷰가 렌더링안된다.
             
-            
+//            Image("imageName입력") // Assest이미지
+            Image(systemName: "star")
+                .resizable() //리사이징
+                .frame(width: 100, height: 50)//크기
+                .background(.gray)
+                .offset(x: isAnimating ? -100 : 100, y: isAnimating ? -1 : 100) //좌표
+                .animation(.easeInOut.speed(0.2).repeatForever().delay(2), value: isAnimating)
+            //delay는 2초뒤 움직임, https://easings.net/ (여기를 참고하면 애니매이션종류 알기쉬워)
             // ZStack 설명
             ZStack { // 겹쳐서 만듬.
                 characterName
@@ -123,6 +137,7 @@ struct Tamagochi: View {
         .onAppear(perform: {
             print("viewDidAppear")
             print("viewdidload에 하고싶은 기능 여기쓰면 이상함.1 ")
+            isAnimating = true
         })
         .onDisappear(perform: {
             print("viewDidappear")

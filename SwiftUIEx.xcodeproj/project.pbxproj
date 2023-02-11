@@ -17,6 +17,11 @@
 		18B925E3294FF15800A25AAF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925E2294FF15800A25AAF /* Persistence.swift */; };
 		18B925E6294FF15800A25AAF /* SwiftUIEx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18B925E4294FF15800A25AAF /* SwiftUIEx.xcdatamodeld */; };
 		18E109D729925CDF00355777 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E109D629925CDF00355777 /* ListView.swift */; };
+		18FED1C229976A2800A2834A /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FED1C129976A2800A2834A /* SampleViewController.swift */; };
+		18FED1C429976A4E00A2834A /* Representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FED1C329976A4E00A2834A /* Representable.swift */; };
+		18FED1C82997713600A2834A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FED1C72997713600A2834A /* SwiftUIView.swift */; };
+		18FED1CA2997716500A2834A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FED1C92997716500A2834A /* ViewController.swift */; };
+		18FED1CC2997717900A2834A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FED1CB2997717900A2834A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		18B925EB294FF15800A25AAF /* SwiftUIExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B925F5294FF15800A25AAF /* SwiftUIExUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E109D629925CDF00355777 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		18FED1C129976A2800A2834A /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		18FED1C329976A4E00A2834A /* Representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representable.swift; sourceTree = "<group>"; };
+		18FED1C72997713600A2834A /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		18FED1C92997716500A2834A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18FED1CB2997717900A2834A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +112,9 @@
 				18E109D629925CDF00355777 /* ListView.swift */,
 				18B925DB294FF15700A25AAF /* ContentView.swift */,
 				18611AB42993A61C00AC0080 /* Tamagochi.swift */,
+				18FED1C6299770F200A2834A /* UIKit_addSwiftUI */,
 				180A982629952D6200962CAE /* InputView.swift */,
+				18FED1C529976A5B00A2834A /* swiftui_addUIKit */,
 				1801F9F4294FF93D00AB5CDA /* ExampleView.swift */,
 				18B925DD294FF15800A25AAF /* Assets.xcassets */,
 				18B925E2294FF15800A25AAF /* Persistence.swift */,
@@ -118,6 +130,25 @@
 				18B925E0294FF15800A25AAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18FED1C529976A5B00A2834A /* swiftui_addUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				18FED1C129976A2800A2834A /* SampleViewController.swift */,
+				18FED1C329976A4E00A2834A /* Representable.swift */,
+			);
+			path = swiftui_addUIKit;
+			sourceTree = "<group>";
+		};
+		18FED1C6299770F200A2834A /* UIKit_addSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				18FED1C72997713600A2834A /* SwiftUIView.swift */,
+				18FED1C92997716500A2834A /* ViewController.swift */,
+				18FED1CB2997717900A2834A /* Main.storyboard */,
+			);
+			path = UIKit_addSwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +257,7 @@
 			files = (
 				18B925E1294FF15800A25AAF /* Preview Assets.xcassets in Resources */,
 				18B925DE294FF15800A25AAF /* Assets.xcassets in Resources */,
+				18FED1CC2997717900A2834A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +284,16 @@
 			files = (
 				18B925E3294FF15800A25AAF /* Persistence.swift in Sources */,
 				18B925DC294FF15700A25AAF /* ContentView.swift in Sources */,
+				18FED1C82997713600A2834A /* SwiftUIView.swift in Sources */,
 				18611AB52993A61C00AC0080 /* Tamagochi.swift in Sources */,
 				18E109D729925CDF00355777 /* ListView.swift in Sources */,
 				18B925E6294FF15800A25AAF /* SwiftUIEx.xcdatamodeld in Sources */,
+				18FED1CA2997716500A2834A /* ViewController.swift in Sources */,
 				180A982729952D6200962CAE /* InputView.swift in Sources */,
 				18B925DA294FF15700A25AAF /* SwiftUIExApp.swift in Sources */,
 				1801F9F5294FF93D00AB5CDA /* ExampleView.swift in Sources */,
+				18FED1C429976A4E00A2834A /* Representable.swift in Sources */,
+				18FED1C229976A2800A2834A /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
