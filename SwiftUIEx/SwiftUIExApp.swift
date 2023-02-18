@@ -13,7 +13,8 @@ struct SwiftUIExApp: App { //swiftui 는 프로토콜 기반으로 만들어진�
 
     var body: some Scene { //appdelegate, scenedelegate 같은것.
         WindowGroup { //windowGroup 구조체기반
-            ContentView()
+//            ContentView()
+            popup()
                 
         }
     }

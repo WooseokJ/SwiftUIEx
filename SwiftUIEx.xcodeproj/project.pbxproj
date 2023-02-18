@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1801F9F5294FF93D00AB5CDA /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801F9F4294FF93D00AB5CDA /* ExampleView.swift */; };
+		18057E2A299F4461007E6B40 /* SwiftUIExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18057E29299F4461007E6B40 /* SwiftUIExample.swift */; };
+		18057E2C299F6DCC007E6B40 /* popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18057E2B299F6DCC007E6B40 /* popup.swift */; };
 		180A982729952D6200962CAE /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A982629952D6200962CAE /* InputView.swift */; };
 		18611AB52993A61C00AC0080 /* Tamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18611AB42993A61C00AC0080 /* Tamagochi.swift */; };
 		18B925DA294FF15700A25AAF /* SwiftUIExApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B925D9294FF15700A25AAF /* SwiftUIExApp.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		1801F9F4294FF93D00AB5CDA /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		18057E29299F4461007E6B40 /* SwiftUIExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExample.swift; sourceTree = "<group>"; };
+		18057E2B299F6DCC007E6B40 /* popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popup.swift; sourceTree = "<group>"; };
 		180A982629952D6200962CAE /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		18611AB42993A61C00AC0080 /* Tamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagochi.swift; sourceTree = "<group>"; };
 		18B925D6294FF15700A25AAF /* SwiftUIEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,8 @@
 		18B925CD294FF15700A25AAF = {
 			isa = PBXGroup;
 			children = (
+				18057E29299F4461007E6B40 /* SwiftUIExample.swift */,
+				18057E2B299F6DCC007E6B40 /* popup.swift */,
 				18B925D8294FF15700A25AAF /* SwiftUIEx */,
 				18B925D7294FF15700A25AAF /* Products */,
 			);
@@ -291,8 +297,10 @@
 				18FED1CA2997716500A2834A /* ViewController.swift in Sources */,
 				180A982729952D6200962CAE /* InputView.swift in Sources */,
 				18B925DA294FF15700A25AAF /* SwiftUIExApp.swift in Sources */,
+				18057E2A299F4461007E6B40 /* SwiftUIExample.swift in Sources */,
 				1801F9F5294FF93D00AB5CDA /* ExampleView.swift in Sources */,
 				18FED1C429976A4E00A2834A /* Representable.swift in Sources */,
+				18057E2C299F6DCC007E6B40 /* popup.swift in Sources */,
 				18FED1C229976A2800A2834A /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

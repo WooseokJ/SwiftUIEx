@@ -12,6 +12,7 @@ struct SwiftUIView: View {
     var body: some View {
         Text("Hello, \(apple)")
     }
+    
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
